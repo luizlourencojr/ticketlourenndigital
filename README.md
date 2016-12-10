@@ -1,72 +1,202 @@
 # ticketlourenndigital
 Ticket Lourenn Digital
-<?xml version="1.0" encoding="UTF-8" ?>
-<!--
-By modifying this file, you can customize your context menu popuped as right clicking on the edit zone.
-It may be more convinient to access to your frequent used commands via context menu than via the top menu.
+<!DOCTYPE html>
+ 
+<html>
+ <head>
+ <title> Formulário completo em HTML </title>
+ <meta name="description" content="Cadastro completo do formulários em HTML">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ </head>
 
-Please check "How to Customize the Context Menu" on:
-http://sourceforge.net/apps/mediawiki/notepad-plus/index.php?title=Context_Menu
--->
-<NotepadPlus>
-    <ScintillaContextMenu>
-		<!-- 
-		Use MenuEntryName and MenuItemName to localize your commands to add. 
-		The values should be in English but not in translated language.
-		(You can set Notepad++ language back to English from Preferences dialog via menu "Settings->Preferences...")
-		-->
-        <Item MenuEntryName="Edit" MenuItemName="Cut"/>
-        <Item MenuEntryName="Edit" MenuItemName="Copy"/>
-        <Item MenuEntryName="Edit" MenuItemName="Paste"/>
-        <Item MenuEntryName="Edit" MenuItemName="Delete"/>
-        <Item MenuEntryName="Edit" MenuItemName="Select all"/>
-        <Item MenuEntryName="Edit" MenuItemName="Begin/End Select"/>
-		
-		<!-- id="0" is the separator -->
-        <Item id="0"/>
-		
-		<!-- You can use command id to add the commands you want. 
-		Check english.xml to get commands id:
-		http://notepad-plus.svn.sourceforge.net/viewvc/notepad-plus/trunk/PowerEditor/installer/nativeLang/english.xml
-		
-		Use FolderName (optional) to create sub-menu. FolderName can be used in any type of item.
-		FolderName value can be in any language.
-		-->
-        <Item FolderName="Style token" id="43022"/>
-        <Item FolderName="Style token" id="43024"/>
-        <Item FolderName="Style token" id="43026"/>
-        <Item FolderName="Style token" id="43028"/>
-        <Item FolderName="Style token" id="43030"/>
-		
-        <Item FolderName="Remove style" id="43023"/>
-        <Item FolderName="Remove style" id="43025"/>
-        <Item FolderName="Remove style" id="43027"/>
-        <Item FolderName="Remove style" id="43029"/>
-        <Item FolderName="Remove style" id="43031"/>
-        <Item FolderName="Remove style" id="43032"/>
-        <Item id="0"/>
-		
-		<!--
-		To add plugin commands, you have to use PluginEntryName and PluginCommandItemName to localize the plugin commands
-		-->
-		<Item FolderName="Plugin commands" PluginEntryName="MIME Tools" PluginCommandItemName="Base64 Encode" />
-        <Item FolderName="Plugin commands" PluginEntryName="MIME Tools" PluginCommandItemName="Base64 Decode" />
-		
-		<!--
-		Use ItemNameAs (optional) to rename the menu item name in the context menu 
-		ItemNameAs can be used in any type of item. ItemNameAs value can be in any language.
-		-->
-        <Item FolderName="Plugin commands" PluginEntryName="NppExport" PluginCommandItemName="Copy all formats to clipboard" ItemNameAs="Copy Text with Syntax Highlighting" />
-		<Item id="0"/>
-        <Item MenuEntryName="Run" MenuItemName="Google Search"/>
-        <Item id="0"/>
-        <Item MenuEntryName="Edit" MenuItemName="UPPERCASE"/>
-        <Item MenuEntryName="Edit" MenuItemName="lowercase"/>
-        <Item id="0"/>
-        <Item MenuEntryName="Edit" MenuItemName="Toggle Single Line Comment"/>
-        <Item MenuEntryName="Edit" MenuItemName="Block Comment"/>
-        <Item MenuEntryName="Edit" MenuItemName="Block Uncomment"/>
-        <Item id="0"/>
-        <Item MenuEntryName="View" MenuItemName="Hide lines"/>
-    </ScintillaContextMenu>
-</NotepadPlus>
+ <body>
+  <h1> Bem vindo ao site Ticket Fest Digital</h1> 
+  <h2> Preencha o formulário abaixo para participar dos nossos Shows e eventos</h2><br />
+
+<form action="Script_do_Formulario.php" method="post">
+
+<!-- DADOS PESSOAIS-->
+<fieldset>
+ <legend>Dados Pessoais</legend>
+ <table cellspacing="10">
+  <tr>
+   <td>
+    <label for="nome">Nome: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="email">
+   </td>
+   <td>
+    <label for="sobrenome">Sobrenome: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="sobrenome">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label>Nascimento: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
+   <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
+   <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="rg">RG: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="rg" size="13" maxlength="13"> 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label>CPF:</label>
+   </td>
+   <td align="left">
+    <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+   </td>
+  </tr>
+ </table>
+</fieldset>
+
+<br />
+<!-- ENDEREÇO -->
+<fieldset>
+ <legend>Dados de Endereço</legend>
+ <table cellspacing="10">
+
+  <tr>
+   <td>
+    <label for="rua">Rua:</label>
+   </td>
+   <td align="left">
+    <input type="text" name="rua">
+   </td>
+   <td>
+    <label for="numero">Numero:</label>
+   </td>
+   <td align="left">
+    <input type="text" name="numero" size="4">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="bairro">Bairro: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="bairro">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="estado">Estado:</label>
+   </td>
+   <td align="left">
+    <select name="estado"> 
+    <option value="ac">Acre</option> 
+    <option value="al">Alagoas</option> 
+    <option value="am">Amazonas</option> 
+    <option value="ap">Amapá</option> 
+    <option value="ba">Bahia</option> 
+    <option value="ce">Ceará</option> 
+    <option value="df">Distrito Federal</option> 
+    <option value="es">Espírito Santo</option> 
+    <option value="go">Goiás</option> 
+    <option value="ma">Maranhão</option> 
+    <option value="mt">Mato Grosso</option> 
+    <option value="ms">Mato Grosso do Sul</option> 
+    <option value="mg">Minas Gerais</option> 
+    <option value="pa">Pará</option> 
+    <option value="pb">Paraíba</option> 
+    <option value="pr">Paraná</option> 
+    <option value="pe">Pernambuco</option> 
+    <option value="pi">Piauí</option> 
+    <option value="rj">Rio de Janeiro</option> 
+    <option value="rn">Rio Grande do Norte</option> 
+    <option value="ro">Rondônia</option> 
+    <option value="rs">Rio Grande do Sul</option> 
+    <option value="rr">Roraima</option> 
+    <option value="sc">Santa Catarina</option> 
+    <option value="se">Sergipe</option> 
+    <option value="sp">São Paulo</option> 
+    <option value="to">Tocantins</option> 
+   </select>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="cidade">Cidade: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="cidade">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="cep">CEP: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+   </td>
+  </tr>
+ </table>
+</fieldset>
+<br />
+
+<!-- DADOS DE LOGIN -->
+<fieldset>
+ <legend>Dados de login</legend>
+ <table cellspacing="10">
+  <tr>
+   <td>
+    <label for="email">E-mail: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="email">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="imagem">Imagem de perfil:</label>
+   </td>
+   <td>
+    <input type="file" name="imagem" >
+
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="login">Login de usuário: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="login">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="pass">Senha: </label>
+   </td>
+   <td align="left">
+    <input type="password" name="pass">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="passconfirm">Confirme a senha: </label>
+   </td>
+   <td align="left">
+    <input type="password" name="passconfirm">
+   </td>
+  </tr>
+ </table>
+</fieldset>
+<br />
+<input type="submit">
+<input type="reset" value="Limpar">
+</form>
+
+ </body>
+</html>
